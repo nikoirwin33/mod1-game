@@ -1,3 +1,8 @@
+let bckColors =["lightblue","lightpink"];
+let i = 0;
+setInterval(function(){
+  document.body.style.backgroundColor = bckColors [i]; i= (i+1) % bckColors.length;},2000)
+  
 const boxes = document.querySelectorAll(".box");
 
 // create function for each box
