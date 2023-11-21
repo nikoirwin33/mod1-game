@@ -21,6 +21,29 @@ boxes.forEach(function (box) {
     if (!firstCard && !secondCard) {
       firstCard = box;
       box.classList.add("show");
+    } else if (firstCard && !secondCard) {
+      secondCard = box;
+      box.classList.add("show");
+      firstCard.style.pointerEvents = "none";
+        if (firstCard.innerHTML === secondCard.innerHTML) {
+        secondCard.style.pointerEvents = "none";
+        firstCard = null;
+        secondCard = null;
+        clickCounter++;
+        if (clickCounter >= 6)
+          setTimeout(() => alert("GAME IS OVER! Refresh to play again!!"), 2000);
+      } else {
+        firstCard.classList.add("hide");
+        secondCard.classList.add("hide");
+        setTimeout(() => {
+          firstCard.classList.remove("show");
+          secondCard.classList.remove("show");
+          firstCard.classList.remove("hide");
+          secondCard.classList.remove("hide");
+          firstCard = null;
+          secondCard = null;
+        }, 2000);
+      }
     }
-  }
-}
+  });
+});
