@@ -37,3 +37,16 @@ main {
   cursor: grab;
 
 }
+
+@keyframes show {
+  0% {
+      background-color: darkblue;
+      color: transparent;
+  }
+
+  100% {
+      background-color: white;
+      color: black;
+  }
+}
+
