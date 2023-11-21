@@ -40,7 +40,7 @@ main {
 
 @keyframes show {
   0% {
-      background-color: darkblue;
+      background-color: purple;
       color: transparent;
   }
 
@@ -50,3 +50,18 @@ main {
   }
 }
 
+.hide {
+  animation: hide 2s forwards;
+}
+
+@keyframes hide {
+  0% {
+      background-color: white;
+      color: black;
+  }
+
+  100% {
+      background-color: darkgreen;
+      color: transparent;
+  }
+}
